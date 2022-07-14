@@ -33,6 +33,7 @@ const Login = ( ) =>{
         data["token"] ? setDisplay(false) : setDisplay(true)
        })
       .catch(err =>{
+        setDisplay(true)
           console.log(err);
       })
       name.current.value = null;
@@ -54,7 +55,7 @@ const Login = ( ) =>{
                   <button className='btn btn-danger' type='submit' >Login</button>
                 </form>
          
-                   <h1 className={display ? 'w-50 mx-auto my-5 alert alert-danger' : 'd-none'} >Ma'lumotlar xato kiritildi</h1>
+                   <h1 className={display ? 'w-50 mx-auto my-5 alert alert-danger' : 'd-none'} >Ma'lumotlar xato kiritildi yoki server bilan muammo bor</h1>
                    
                 </div>
              )
